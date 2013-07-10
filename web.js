@@ -5,11 +5,9 @@ var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
 
-fs.readFile('index.html', 'utf8', function (err,data) {
-  if (err) {
-    return console.log(err);
-  }
-  response.send(data.toString());
+  var buf = fs.readFile('index.html');
+
+  response.send(buf.toString());
 });
 
   //response.send('Hello World2!');
