@@ -8,9 +8,7 @@ app.get('/', function(request, response) {
   var buf = fs.readFile('index.html');
 
   response.send(buf.toString());
-});
-
-  //response.send('Hello World2!');
+  
 });
 
 var port = process.env.PORT || 5000;
